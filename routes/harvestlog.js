@@ -7,10 +7,10 @@ var sql = require('mssql');
 // Create a configuration object for our Azure SQL connection parameters
 
 var dbConfig = {
- server: 'mikcsqldb1.cgjaehfgufhe.us-east-2.rds.amazonaws.com', // Use your SQL server name
- database: 'mikcsqldb1', // Database to connect to
- user: 'mikcsqladmin', // Use your username
- password: '$Grantmew1sd0m$', // Use your password
+ server: '', // Use your SQL server name
+ database: '', // Database to connect to
+ user: '', // Use your username
+ password: '', // Use your password
  port: 1433
 };
 
