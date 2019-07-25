@@ -1,0 +1,81 @@
+<%- include layouts/_header.ejs %>
+    
+  <%- include layouts/_nav.ejs %>
+
+    <h2><%= title %></h2>
+    <p>Harvest Log!</p>
+    
+    <hr>
+    <div class="clearfix">
+    <button type="button" class="btn btn-primary float-right" onclick="window.location.href = '/harvest';">
+        Add Harvest Data
+    </button>
+    </div>
+
+    
+    <table class="table table-striped">
+        <thead class="thead-light">
+          <tr>
+            <th>ID</th>
+            <th>Created</th>
+            <th>PlantDate</th>
+            <th>HarvestDate</th>
+            <th>Product</th>
+            <th>Age</th>
+            <th>Trays</th>
+            <th>Containers</th>
+            <th>TotalYield</th>
+            <th>PackagingRange</th>
+            <th>Avg Container</th>
+
+          </tr>
+        </thead>
+        <tbody>
+      <% for (var i = 0; i < harvestlogjson.length; i++) { %>
+        <tr>      
+          <td><%= harvestlogjson[i].ID %></td>
+          <td><%= harvestlogjson[i].created_at.toDateString(); %></td>
+          <td><%= harvestlogjson[i].PlantDate %></td>
+          <td><%= harvestlogjson[i].HarvestDate %></td>
+          <td><%= harvestlogjson[i].Product %></td>
+          <td><%= harvestlogjson[i].Age %></td>
+          <td><%= harvestlogjson[i].Trays %></td>
+          <td><%= harvestlogjson[i].Containers %></td>
+          <td><%= harvestlogjson[i].TotalYield %></td>
+          <td><%= harvestlogjson[i].PackagingRange %></td>
+          <td><%= harvestlogjson[i].AvgContainer %></td>
+          
+        </tr>
+      <% } %>
+    </tbody>
+    </table>
+    
+    <!--
+    <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>HarvestDate</th>
+            <th>Product</th>
+            <th>TotalYield</th>
+            <th>Containers</th>
+          </tr>
+        </thead>
+        <tbody>
+      <% for (var i = 0; i < harvestlogjson.length; i++) { %>
+        <tr>      
+          <td><%= harvestlogjson[i].ID %></td>
+                <td><%= harvestlogjson[i].HarvestDate %></td>
+                <td><%= harvestlogjson[i].Product %></td>
+                <td><%= harvestlogjson[i].TotalYield %></td>
+                <td><%= harvestlogjson[i].Containers %></td>
+        </tr>
+      <% } %>
+    </tbody>
+    </table> 
+    -->
+
+    <script>
+
+    </script>
+<%- include layouts/_footer.ejs %>

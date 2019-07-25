@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+footer {text-align: center;}
+
+/* Custom */
+.nav-link {font-size:20px;}
+
+.container {
+    width: 1025px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.btn-primary {
+  margin-bottom: 15px;
+}
+
+.dropdown-item:hover {color: #007bff;}

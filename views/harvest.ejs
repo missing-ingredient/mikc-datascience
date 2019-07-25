@@ -1,0 +1,120 @@
+<%- include layouts/_header.ejs %>
+    
+  <%- include layouts/_nav.ejs %>
+
+    <h2><%= title %></h2>
+    <p>Harvest</p>
+
+    <hr> 
+    <div class="clearfix">
+      <button type="button" class="btn btn-primary float-right" onclick="window.location.href = '/harvestlog';">View Harvest Log</button>
+    </div>
+       
+    <div class="container">
+        
+        <form id="AddHarvestData" action="/harvest" method="post">
+            <div class="row">
+                <div class="col-6"><!--left side -->
+                    <div class="form-group row">
+                        <label for="plantDate" class="col-sm-6 col-form-label">Plant Date:</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control date-picker" name="plantDate" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="harvestDate" class="col-sm-6 col-form-label">Harvest Date:</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control date-picker" name="harvestDate" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="product" class="col-sm-6 col-form-label">Product:</label>
+                        <div class="col-sm-6">
+                            <select name="product" class="custom-select" class="month/year">
+                              <option selected>Choose Product</option>
+                              <option value="Arugula">Arugula</option>
+                              <option value="Basil">Basil</option> 
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="age" class="col-sm-6 col-form-label">Age</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="age">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-6">
+                    <div class="form-group row">
+                        <label for="trays" class="col-sm-6 col-form-label">Trays</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="trays">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="containers" class="col-sm-6 col-form-label">Containers</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="containers">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="totalYield" class="col-sm-6 col-form-label">Total Yield</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="totalYield">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="packagingRange" class="col-sm-6 col-form-label">Packaging Range</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="packagingRange">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="avgContainer" class="col-sm-6 col-form-label">Avg Container</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="avgContainer">
+                        </div>
+                    </div>
+    
+                </div><!--right side -->
+            </div><!-- form for teacher/student-->
+            <button id="SubmitHarvestData" type="submit" class="btn btn-primary">Submit</button> <span style="color:green;"><strong><%= message %></strong></span>
+            
+        </form> 
+    </div>
+              <!--<button id="SubmitHarvestData" type="submit" class="btn btn-primary">Submit</button>-->
+          <!--
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Harvest Date:</label>
+              <input type="text" class="form-control" name="harvest-date">
+            </div>
+
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Product:</label>
+              <select class="custom-select custom-select-sm" name="product">
+                  <option selected>Choose Product</option>
+                  <option value="Arugula">Arugula</option>
+                  <option value="Basil">Basil</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Total Yield:</label>
+              <input type="text" class="form-control" name="total-yield">
+            </div>
+
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Containers:</label>
+              <input type="text" class="form-control" name="containers">
+            </div>
+            -->
+            
+<%- include layouts/_footer.ejs %>

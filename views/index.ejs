@@ -1,0 +1,41 @@
+<%- include layouts/_header.ejs %>
+    
+  <%- include layouts/_nav.ejs %>
+
+    <h2><%= title %></h2>
+    <p>Welcome to <%= title %></p>
+
+    <hr>
+
+    <div class="container">
+        <div class="col-sm-6 col-sm-offset-3">
+        
+            <h2><span class="fa fa-sign-in"></span> <%= page %></h2>
+        
+            <% if (message.length > 0) { %>
+                <div class="alert alert-danger"><%= message %></div>
+            <% } %>
+        
+            <!-- LOGIN FORM -->
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+        
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        
+            <hr>
+        
+          
+        
+        </div>
+        </div>
+  
+    
+<%- include layouts/_footer.ejs %>
